@@ -11,7 +11,7 @@ module "lambda" {
   description                       = "deletes unused Lambda versions"
   filename                          = local.artifact
   function_name                     = local.function_name
-  handler                           = "clean.handler"
+  handler                           = "functions/clean.handler"
   runtime                           = "nodejs14.x"
   source_code_hash                  = filebase64sha256(local.artifact)
   timeout                           = 900
