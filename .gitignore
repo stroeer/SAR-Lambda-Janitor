@@ -27,3 +27,10 @@ coverage
 .DS_Store
 
 .env
+
+# AWS
+lambda.zip
+
+# Terraform
+terraform/terraform.tfstate*
+terraform/.terraform
