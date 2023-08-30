@@ -22,11 +22,11 @@ tf ::
 
 .PHONY: build
 build ::
-	npm install
+	npm install --legacy-peer-deps
 
 .PHONY: package
-package ::
-	zip -rq9 lambda.zip functions/* node_modules -x node_modules/aws-sdk/\*
+package :: build
+	zip -rq9 lambda.zip functions/* node_modules
 
 .PHONY: clean
 clean ::
