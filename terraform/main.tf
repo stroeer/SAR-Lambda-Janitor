@@ -5,7 +5,7 @@ locals {
 
 module "lambda" {
   source  = "registry.terraform.io/moritzzimmer/lambda/aws"
-  version = "6.13.0"
+  version = "7.2.0"
 
   architectures                     = ["arm64"]
   cloudwatch_logs_retention_in_days = 1
